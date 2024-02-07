@@ -1,9 +1,113 @@
-class Quarto {
+// Classe Quarto:
+// Representa um quarto de hotel com atributos como número, tipo, preço da diária e estado de reserva.
+
+//     Atributos:
+//         numero: Número identificador do quarto.
+//         tipo: Tipo de quarto (ex: Standard, Luxo, Suíte).
+//         precoDiaria: Preço da diária do quarto.
+//         reservado: Indica se o quarto está reservado (inicialmente falso).
+
+//     Método verificarDisponibilidade():
+//         Retorna um booleano indicando se o quarto está disponível para reserva.
+
+// Classe Hospede:
+// Representa um hóspede do hotel com atributos como nome e e-mail.
+
+//     Atributos:
+//         nome: Nome do hóspede.
+//         email: Endereço de e-mail do hóspede.
+
+
+
+
+// Classe Reserva:
+// Representa uma reserva de quarto associada a um hóspede, um quarto e as datas de início e fim da estadia.
+
+//     Atributos:
+//         quarto: Quarto reservado.
+//         hospede: Hóspede associado à reserva.
+//         dataInicio: Data de início da reserva.
+//         dataFim: Data de fim da reserva.
+//         custoTotal: Custo total da estadia, calculado automaticamente.
+
+//     Método calculaCustoTotal():
+//         Calcula o custo total da estadia com base nas datas de início e fim e no preço da diária do quarto.
+
+
+// Classe Hotel:
+// Representa um hotel que possui quartos e gerencia reservas.
+
+//     Atributos:
+//         quartos: Array de quartos disponíveis no hotel.
+//         reservas: Array de reservas realizadas no hotel.
+
+//     Método adicionarQuarto(quarto):
+//         Adiciona um quarto à lista de quartos disponíveis no hotel.
+
+//     Método reservarQuarto(quarto, hospede, dataInicio, dataFim):
+//         Reserva um quarto para um hóspede nas datas especificadas.
+//         Retorna a reserva se bem-sucedida; caso contrário, retorna null.
+
+//     Método exibirQuartosDisponiveis():
+//         Exibe no console os quartos disponíveis no hotel.
+
+// Exemplo de Uso:
+
+//     Cria um hotel, adiciona quartos e exibe os quartos disponíveis.
+//     Cria um hóspede.
+//     Reserva um quarto para o hóspede e exibe o custo total da reserva.
+//     Tenta reservar um quarto ocupado.
+//     Exibe os quartos disponíveis após as reservas.
+
+
+class quarto {
     constructor (numero, tipo, precoDiaria, reservado){
-        this.numero = numero
-        this.tipo = tipo
-        this.precoDiaria = precoDiaria
-        this.reservado = reservado
+        this.numero = numero;
+        this.tipo = tipo;
+        this.precoDiaria = precoDiaria;
+        this.reservado = reservado;
 
     }
+}
+
+
+class hospede {
+    constructor (nome, email){
+        this.nome = nome;
+        this.email = email;
+
+    }
+}
+
+class reserva {
+    constructor(quarto, hospede, dataInicio, dataFim){
+        super(quarto, hospede,);
+        this.dataInicio = dataInicio;
+        this.dataFim = dataFim;
+        
+        //calculaCustoTotal(){}
+
+    }
+}
+
+class hotel {
+    constructor (numero, nome){
+        super(numero, nome);
+
+    }
+}
+
+let quartos= [];
+let reserva = [];
+
+function adicionarQuarto(){
+
+}
+
+function reservarQuarto(){
+
+}
+
+function exibirQuartosDisponiveis(){
+
 }
